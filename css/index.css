@@ -539,21 +539,43 @@ footer {
 
 /* =========================================
    DESKTOP
+   REORGANIZAÇÃO DO CABEÇALHO
 ========================================= */
 
 @media (min-width: 750px) {
 
-    .cabecalho {
-        min-height: 65px;
+    /*
+       Alteração realizada na branch:
+       refactor/reorganizar-cabecalho
 
-        padding: 12px 30px;
+       Melhora o agrupamento, alinhamento
+       e espaçamento entre identidade e menu.
+    */
+
+    .cabecalho {
+        min-height: 72px;
+
+        padding: 14px 30px;
 
         flex-direction: row;
 
         justify-content: space-between;
         align-items: center;
+
+        gap: 32px;
     }
 
+    .brand {
+        flex-shrink: 0;
+    }
+
+    .menu-topo {
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+
+    /* LAYOUT */
 
     .layout {
         max-width: 1150px;
@@ -569,13 +591,14 @@ footer {
     }
 
 
+    /* MENU LATERAL */
+
     .sidebar {
         padding: 28px 22px;
 
         border-right: 1px solid #eadff2;
         border-bottom: none;
     }
-
 
     .sidebar ul {
         position: sticky;
@@ -587,11 +610,12 @@ footer {
         gap: 6px;
     }
 
-
     .sidebar a {
         width: 100%;
     }
 
+
+    /* HERO */
 
     .hero {
         min-height: 300px;
@@ -600,20 +624,22 @@ footer {
     }
 
 
+    /* SEÇÕES */
+
     .secao {
         padding: 32px 38px;
     }
-
 
     .secao + .secao {
         padding-top: 18px;
     }
 
 
+    /* EVENTOS */
+
     .eventos {
         padding: 25px 38px 45px;
     }
-
 }
 
 
@@ -631,11 +657,9 @@ footer {
             max(30px, calc((100% - 1150px) / 2));
     }
 
-
     .hero {
         min-height: 320px;
     }
-
 }
 
 
@@ -649,38 +673,31 @@ footer {
         padding: 16px;
     }
 
-
     .menu-topo {
         gap: 4px 8px;
     }
 
-
     .sidebar {
         padding: 10px 16px;
     }
-
 
     .secao {
         padding-left: 16px;
         padding-right: 16px;
     }
 
-
     .cards {
         grid-template-columns: 1fr;
     }
-
 
     .imagem {
         height: 180px;
     }
 
-
     .eventos {
         padding-left: 16px;
         padding-right: 16px;
     }
-
 }
 
 
@@ -699,5 +716,4 @@ footer {
     *::after {
         transition-duration: 0.01ms !important;
     }
-
 }
